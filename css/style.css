@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #0b5ed7;
+    --accent: #f59e0b;
+    --muted: #6c757d;
+    --bg: #f3f6fb;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: #0f1724;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+    background: linear-gradient(90deg, var(--primary), #1947b3)
+}
+
+.navbar .navbar-brand img{
+    height: 50px;
+}
+
+.footer .img{
+    height: 50px;
+}
+
+.hero {
+    padding: 6rem 1rem;
+    background: linear-gradient(180deg, rgba(11, 94, 215, 0.08), transparent 60%);
+}
+
+.hero .lead {
+    color: var(--muted)
+}
+
+.hero .btn-primary {
+    background: var(--primary);
+    border: none
+}
+
+.card {
+    border-radius: 12px
+}
+
+.card h5 {
+    font-weight: 600
+}
+
+.features .card {
+    transition: transform .25s, box-shadow .25s
+}
+
+.features .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(14, 30, 50, 0.12)
+}
+
+footer {
+    background: #071b3a;
+    color: #cfe3ff;
+}
+
+.site-footer .footer-links a {
+    color: #cfe3ff;
+    text-decoration: none
+}
+
+/* Login */
+.card .form-control {
+    border-radius: 8px
+}
+
+.card .btn {
+    border-radius: 8px
+}
+
+@media(min-width:992px) {
+    .hero {
+        padding: 8rem 0
+    }
+}
+
+/* utility spacing */
+.muted {
+    color: var(--muted)
+}
+
+/* small touches for accessibility focus */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(11, 94, 215, 0.15);
+    outline-offset: 3px
+}
