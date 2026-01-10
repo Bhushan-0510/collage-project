@@ -1,276 +1,336 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <!-- SEO Meta Tags -->
-    <title>ARMS | Academic Resource Management System - MCM Department</title>
-    <meta name="description"
-        content="Academic Resource Management System for M.Com in Computer Management at L.R.T Commerce College, Akola. Centralized platform for verified academic resources.">
-    <meta name="keywords" content="ARMS, Academic Resources, MCM, L.R.T Commerce College, Akola, Education Management">
-    <meta name="author" content="MCM Department, L.R.T Commerce College">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ARMS - Academic Resource Management System">
-    <meta property="og:description" content="Centralized platform for verified academic resources - MCM Department">
-    <meta property="og:type" content="website">
-
+    <title>ARMS | Academic Resource Management System</title>
+    <meta name="description" content="ARMS - Academic Resource Management System. Centralized platform for managing and distributing verified academic resources in educational institutions.">
+    <meta name="keywords" content="ARMS, Academic Resources, Education Management, E-Learning Platform, Academic Content Management">
+    <meta name="author" content="ARMS Development Team">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
-
-    <!-- Stylesheets -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Preload Critical Resources -->
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    
     <!-- ==========================================
-         MODERN NAVIGATION BAR
+         NAVIGATION BAR
          ========================================== -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand" aria-label="ARMS Home">ARMS</a>
-
-            <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand fw-bold fs-4" href="index.html">ARMS</a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-
-            <ul class="navbar-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
-                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="faculty.html" class="nav-link" role="menuitem">Faculty</a></li>
-                <li role="none"><a href="syllabus.html" class="nav-link" role="menuitem">Syllabus</a></li>
-                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
-                <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
-            </ul>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active px-3" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="demo.html">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-2">
+                        <a class="btn btn-gradient px-4 py-2" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
+    
     <!-- ==========================================
          HERO SECTION WITH PARALLAX
          ========================================== -->
-    <section class="hero" id="home">
+    <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
         <!-- Animated Background Particles -->
-        <div class="hero-particles" aria-hidden="true"></div>
-
-        <div class="hero-content">
-            <p class="hero-subtitle">Academic Excellence Platform</p>
-            <h1>Academic Resource<br>Management System</h1>
-            <p class="hero-description">
-                Centralized platform for verified academic resources, managed by faculty and accessible to students
-            </p>
-            <p class="hero-college">
-                M.Com in Computer Management (MCM)<br>
-                L.R.T Commerce College, Akola
-            </p>
-            <div class="hero-buttons">
-                <a href="login.html" class="btn-primary">Access System</a>
-                <a href="about.html" class="btn-secondary">Learn More</a>
+        <div class="hero-particles position-absolute w-100 h-100" aria-hidden="true"></div>
+        
+        <div class="container position-relative" style="z-index: 10;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9 text-center">
+                    <div class="hero-content">
+                        <p class="hero-subtitle text-uppercase mb-4 fw-semibold" data-aos="fade-up">Smart Academic Solution</p>
+                        <h1 class="display-1 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+                            Academic Resource<br class="d-none d-md-block">Management System
+                        </h1>
+                        <p class="lead text-white-75 mb-4 px-lg-5" data-aos="fade-up" data-aos-delay="200">
+                            A centralized platform designed to streamline the management and distribution of academic resources in educational institutions
+                        </p>
+                        <p class="text-white-50 mb-5" data-aos="fade-up" data-aos-delay="300">
+                            Empowering institutions with verified, organized, and accessible academic content
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                            <a href="login.html" class="btn btn-primary btn-lg px-5 py-3">Access ARMS</a>
+                            <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
          FEATURES SECTION
          ========================================== -->
-    <section class="features-section section-padding" id="features">
+    <section class="py-5 py-lg-6 bg-light">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Why Choose ARMS</span>
-                <h2 class="section-title">Modern Academic Resource Management</h2>
-                <p class="section-description">
-                    ARMS provides a secure, organized, and efficient platform for managing and accessing academic
-                    materials
-                </p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">Why Choose ARMS</span>
+                    <h2 class="display-4 fw-bold mb-4">Comprehensive Academic Resource Management</h2>
+                    <p class="lead text-muted">
+                        ARMS provides institutions with a secure, organized, and efficient platform for managing academic materials
+                    </p>
+                </div>
             </div>
-
-            <div class="features-grid">
+            
+            <div class="row g-4">
                 <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h3>Verified Content</h3>
-                    <p>
-                        All academic resources are verified and approved by the Head of Department, ensuring quality and
-                        accuracy
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">✓</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Verified Content</h3>
+                            <p class="text-muted mb-0">
+                                All academic resources go through an approval workflow, ensuring only verified and quality content is accessible to students
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍🏫</div>
-                    <h3>Faculty Managed</h3>
-                    <p>
-                        Resources are uploaded and maintained by department faculty members, providing authentic study
-                        materials
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">👨‍🏫</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Faculty Controlled</h3>
+                            <p class="text-muted mb-0">
+                                Educators upload and manage academic materials, maintaining control over content quality and relevance
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Student Friendly</h3>
-                    <p>
-                        Easy-to-use interface designed specifically for students to access notes, presentations, and
-                        question banks
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">🎓</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Student Accessible</h3>
+                            <p class="text-muted mb-0">
+                                Intuitive interface designed for students to easily access notes, presentations, question banks, and study materials
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure Access</h3>
-                    <p>
-                        Role-based authentication ensures that only authorized students and faculty can access the
-                        system
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">🔒</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Role-Based Security</h3>
+                            <p class="text-muted mb-0">
+                                Three-tier access control (Admin, Faculty, Student) ensures appropriate permissions and secure content management
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Organized Resources</h3>
-                    <p>
-                        Materials are systematically organized by semester and subject for quick and easy access
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">📚</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Organized Structure</h3>
+                            <p class="text-muted mb-0">
+                                Resources systematically organized by department, course, semester, and subject for efficient navigation
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <!-- Feature 6 -->
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Always Updated</h3>
-                    <p>
-                        Resources are continuously updated to reflect the latest curriculum and academic requirements
-                    </p>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card feature-card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">⚡</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Real-Time Updates</h3>
+                            <p class="text-muted mb-0">
+                                Instant content updates allow institutions to maintain current and relevant academic materials continuously
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
          HOW IT WORKS SECTION
          ========================================== -->
-    <section class="section-padding" style="background: white;">
+    <section class="py-5 py-lg-6 bg-white">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">How ARMS Works</span>
-                <h2 class="section-title">Simple & Efficient Process</h2>
-                <p class="section-description">
-                    A streamlined workflow that ensures quality content reaches students effectively
-                </p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">How ARMS Works</span>
+                    <h2 class="display-4 fw-bold mb-4">Simple & Efficient Process</h2>
+                    <p class="lead text-muted">
+                        A streamlined workflow that ensures quality content reaches students effectively
+                    </p>
+                </div>
             </div>
-
-            <div class="features-grid">
+            
+            <div class="row g-4">
                 <!-- Step 1 -->
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">1
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="feature-icon bg-gradient-secondary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4 fs-4 fw-bold" style="width: 70px; height: 70px;">
+                                1
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Content Upload</h3>
+                            <p class="text-muted mb-0">
+                                Faculty members upload academic resources including lecture notes, presentations, reference materials, and question banks
+                            </p>
+                        </div>
                     </div>
-                    <h3>Faculty Upload</h3>
-                    <p>
-                        Faculty members upload academic resources including notes, presentations, and question banks
-                    </p>
                 </div>
-
+                
                 <!-- Step 2 -->
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">2
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="feature-icon bg-gradient-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4 fs-4 fw-bold" style="width: 70px; height: 70px;">
+                                2
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Admin Verification</h3>
+                            <p class="text-muted mb-0">
+                                Department administrators review and approve all submitted content to ensure quality and accuracy before publication
+                            </p>
+                        </div>
                     </div>
-                    <h3>Admin Verification</h3>
-                    <p>
-                        Head of Department reviews and approves all uploaded content for quality assurance
-                    </p>
                 </div>
-
+                
                 <!-- Step 3 -->
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">3
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="feature-icon bg-gradient-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4 fs-4 fw-bold" style="width: 70px; height: 70px;">
+                                3
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Student Access</h3>
+                            <p class="text-muted mb-0">
+                                Students access verified resources through secure login, download materials, and utilize them for exam preparation
+                            </p>
+                        </div>
                     </div>
-                    <h3>Student Access</h3>
-                    <p>
-                        Students login to access verified resources, download materials, and prepare for exams
-                    </p>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
          CTA SECTION
          ========================================== -->
-    <section class="section-padding"
-        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
-        <div class="container" style="position: relative; z-index: 10; text-align: center; color: white;">
-            <h2 class="section-title scroll-reveal" style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">
-                Ready to Access Academic Resources?
-            </h2>
-            <p class="scroll-reveal"
-                style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto 2.5rem;">
-                Login to ARMS to access verified study materials, notes, and resources curated by your faculty
-            </p>
-            <div class="scroll-reveal">
-                <a href="login.html" class="btn-primary"
-                    style="background: white; color: #667eea; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                    Login to ARMS
-                </a>
+    <section class="py-5 py-lg-6 bg-gradient-primary position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);"></div>
+        
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                        Ready to Transform Your Institution?
+                    </h2>
+                    <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">
+                        Access ARMS to streamline academic resource management in your educational institution
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <a href="login.html" class="btn btn-light btn-lg px-5 py-3">Access System</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Decorative Elements -->
-        <div
-            style="position: absolute; top: 10%; left: 5%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); border-radius: 50%;">
-        </div>
-        <div
-            style="position: absolute; bottom: 10%; right: 5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); border-radius: 50%;">
-        </div>
     </section>
-
+    
     <!-- ==========================================
          FOOTER
          ========================================== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">ARMS</div>
-            <p class="footer-text">
-                Academic Resource Management System<br>
-                M.Com in Computer Management (MCM)<br>
-                L.R.T Commerce College, Akola
-            </p>
-
-            <div class="footer-links">
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="faculty.html" class="footer-link">Faculty</a>
-                <a href="syllabus.html" class="footer-link">Syllabus</a>
-                <a href="contact.html" class="footer-link">Contact</a>
-                <a href="login.html" class="footer-link">Login</a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 ARMS. All rights reserved. | Academic Resource Management System</p>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h3 class="h2 fw-bold mb-3 text-gradient">ARMS</h3>
+                    <p class="text-white-50 mb-4">
+                        Academic Resource Management System<br>
+                        Streamlining academic content distribution in educational institutions
+                    </p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                        <a href="index.html" class="text-white-50 text-decoration-none hover-primary">Home</a>
+                        <a href="about.html" class="text-white-50 text-decoration-none hover-primary">About</a>
+                        <a href="pricing.html" class="text-white-50 text-decoration-none hover-primary">Pricing</a>
+                        <a href="pricing.html" class="text-white-50 text-decoration-none hover-primary">Pricing</a>
+                        <a href="demo.html" class="text-white-50 text-decoration-none hover-primary">Demo</a>
+                        <a href="contact.html" class="text-white-50 text-decoration-none hover-primary">Contact</a>
+                        <a href="login.html" class="text-white-50 text-decoration-none hover-primary">Login</a>
+                    </div>
+                    
+                    <hr class="border-secondary my-4">
+                    
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 ARMS. All rights reserved. | Academic Resource Management System
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- ==========================================
-         JAVASCRIPT
-         ========================================== -->
-    <script>
-        // Remove no-js class if JavaScript is enabled
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="main.js"></script>
-
+    
 </body>
 
 </html>

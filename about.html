@@ -1,277 +1,339 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <title>About ARMS | Academic Resource Management System</title>
-    <meta name="description"
-        content="Learn about ARMS and the MCM department at L.R.T Commerce College, Akola. Discover how we manage academic resources efficiently.">
-
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    <meta name="description" content="Learn about ARMS - Academic Resource Management System. Discover how ARMS streamlines academic content management in educational institutions.">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    
     <!-- ==========================================
          NAVIGATION BAR
          ========================================== -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand" aria-label="ARMS Home">ARMS</a>
-
-            <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand fw-bold fs-4" href="index.html">ARMS</a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-
-            <ul class="navbar-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
-                <li role="none"><a href="about.html" class="nav-link active" role="menuitem">About</a></li>
-                <li role="none"><a href="faculty.html" class="nav-link" role="menuitem">Faculty</a></li>
-                <li role="none"><a href="syllabus.html" class="nav-link" role="menuitem">Syllabus</a></li>
-                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
-                <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
-            </ul>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="demo.html">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-2">
+                        <a class="btn btn-gradient px-4 py-2" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
+    
     <!-- ==========================================
          PAGE HEADER
          ========================================== -->
-    <section
-        style="padding: 150px 2rem 80px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; position: relative; overflow: hidden;">
-        <div
-            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);">
-        </div>
-
-        <div class="container" style="position: relative; z-index: 10;">
-            <span class="section-label" style="background: rgba(99, 102, 241, 0.2); color: #818cf8;">About ARMS</span>
-            <h1 style="color: white; font-size: 3.5rem; margin: 1.5rem 0 1rem; font-weight: 800;">
-                About MCM Department<br>& ARMS Platform
-            </h1>
-            <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Empowering academic excellence through digital resource management
-            </p>
+    <section class="page-header bg-gradient-dark text-white text-center py-5 position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);"></div>
+        
+        <div class="container position-relative py-5" style="margin-top: 80px;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">About the System</span>
+                    <h1 class="display-3 fw-bold mb-4">What is ARMS?</h1>
+                    <p class="lead mb-0">Academic Resource Management System for Modern Educational Institutions</p>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
-         ABOUT MCM DEPARTMENT
+         SYSTEM OVERVIEW
          ========================================== -->
-    <section class="section-padding">
+    <section class="py-5 py-lg-6">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Department</span>
-                <h2 class="section-title">M.Com in Computer Management (MCM)</h2>
-            </div>
-
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="glass-card scroll-reveal" style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.75rem;">Department Overview
-                    </h3>
-                    <p style="color: var(--text-light); line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
-                        The M.Com in Computer Management (MCM) department at L.R.T Commerce College, Akola, is dedicated
-                        to developing technical and managerial skills among students. Our curriculum combines commerce
-                        education with modern computer applications, preparing students for careers in the digital
-                        economy.
-                    </p>
-                    <p style="color: var(--text-light); line-height: 1.8; font-size: 1.1rem;">
-                        We focus on practical knowledge, industry-relevant skills, and academic excellence to ensure our
-                        students are well-equipped for professional challenges in commerce and technology sectors.
-                    </p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">System Overview</span>
+                    <h2 class="display-4 fw-bold mb-4">Understanding ARMS</h2>
                 </div>
-
-                <div class="glass-card scroll-reveal">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.75rem;">Our Academic
-                        Philosophy</h3>
-                    <p style="color: var(--text-light); line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
-                        The MCM department believes in holistic education that balances theoretical knowledge with
-                        practical application. We emphasize critical thinking, problem-solving, and continuous learning
-                        to prepare students for dynamic professional environments.
-                    </p>
-                    <p style="color: var(--text-light); line-height: 1.8; font-size: 1.1rem;">
-                        Our faculty members are committed to providing quality education through innovative teaching
-                        methods, updated curriculum, and personalized mentorship.
-                    </p>
+            </div>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="h3 fw-bold mb-4">What is ARMS?</h3>
+                            <p class="text-muted fs-6 mb-3 lh-lg">
+                                ARMS (Academic Resource Management System) is a centralized digital platform designed to streamline the creation, verification, and distribution of academic study materials within educational institutions. It serves as a comprehensive solution for managing lecture notes, presentations, question banks, reference materials, and other educational resources.
+                            </p>
+                            <p class="text-muted fs-6 mb-0 lh-lg">
+                                The system bridges the gap between educators and learners by providing a secure, organized environment where faculty can contribute content, administrators can ensure quality, and students can access verified resources efficiently.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="h3 fw-bold mb-4">Why ARMS Exists</h3>
+                            <p class="text-muted fs-6 mb-3 lh-lg">
+                                Traditional academic resource distribution methods often result in scattered materials, inconsistent quality, and inefficient access. Students struggle to find authentic study materials, faculty lack a unified platform for content sharing, and institutions have difficulty maintaining quality control over distributed resources.
+                            </p>
+                            <p class="text-muted fs-6 mb-0 lh-lg">
+                                ARMS solves these challenges by providing a single, structured platform that ensures only verified, high-quality academic content reaches students, while giving institutions complete control over their educational resources.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
-         ABOUT ARMS SYSTEM
+         HOW ARMS WORKS
          ========================================== -->
-    <section class="section-padding" style="background: white;">
+    <section class="py-5 py-lg-6 bg-light">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">The ARMS Platform</span>
-                <h2 class="section-title">What is ARMS?</h2>
-                <p class="section-description">
-                    Academic Resource Management System for organized, verified academic content
-                </p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">System Workflow</span>
+                    <h2 class="display-4 fw-bold mb-4">How ARMS Works</h2>
+                    <p class="lead text-muted">A streamlined three-step process ensuring quality content delivery</p>
+                </div>
             </div>
-
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="feature-card scroll-reveal" style="margin-bottom: 2rem;">
-                    <div class="feature-icon">📖</div>
-                    <h3>Purpose of ARMS</h3>
-                    <p style="font-size: 1.05rem; line-height: 1.8;">
-                        ARMS (Academic Resource Management System) is a centralized digital platform designed to
-                        streamline the management and distribution of academic study materials. It serves as a bridge
-                        between faculty expertise and student learning needs, ensuring that only verified, high-quality
-                        resources are accessible to students.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-reveal" style="margin-bottom: 2rem;">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Why ARMS Was Created</h3>
-                    <p style="font-size: 1.05rem; line-height: 1.8;">
-                        Traditional methods of distributing study materials often lead to scattered resources,
-                        unverified content, and inefficient access. ARMS addresses these challenges by providing a
-                        single, organized platform where faculty upload materials, administrators verify quality, and
-                        students access authenticated resources anytime, anywhere.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>How ARMS Benefits Learning</h3>
-                    <p style="font-size: 1.05rem; line-height: 1.8;">
-                        By centralizing academic resources, ARMS ensures students have access to the most current and
-                        relevant study materials. It eliminates confusion about which resources to use, saves time
-                        searching for materials, and provides a structured learning environment that supports academic
-                        success.
-                    </p>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature-icon bg-gradient-secondary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3 fs-5 fw-bold" style="width: 60px; height: 60px;">1</div>
+                                <h3 class="h4 fw-bold mb-0">Content Creation & Upload</h3>
+                            </div>
+                            <p class="text-muted fs-6 mb-0 lh-lg ms-lg-5 ps-lg-4">
+                                Faculty members create and upload academic resources through the ARMS interface. This includes lecture notes, presentations, reference materials, question banks, and supplementary study content. The system organizes materials by department, course, semester, and subject for easy categorization.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature-icon bg-gradient-info text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3 fs-5 fw-bold" style="width: 60px; height: 60px;">2</div>
+                                <h3 class="h4 fw-bold mb-0">Administrative Verification</h3>
+                            </div>
+                            <p class="text-muted fs-6 mb-0 lh-lg ms-lg-5 ps-lg-4">
+                                Department administrators review all uploaded content for accuracy, relevance, and quality. Only verified resources are approved for student access. This verification layer ensures that students receive authentic, reliable study materials that align with the curriculum and institutional standards.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature-icon bg-gradient-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3 fs-5 fw-bold" style="width: 60px; height: 60px;">3</div>
+                                <h3 class="h4 fw-bold mb-0">Student Access & Utilization</h3>
+                            </div>
+                            <p class="text-muted fs-6 mb-0 lh-lg ms-lg-5 ps-lg-4">
+                                Students log in to ARMS using their institutional credentials and access all verified resources relevant to their courses. They can browse materials by subject, download content for offline study, and utilize these resources for exam preparation and academic success.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
-         KEY FEATURES
+         USER ROLES
          ========================================== -->
-    <section class="section-padding">
+    <section class="py-5 py-lg-6">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">System Features</span>
-                <h2 class="section-title">What Makes ARMS Effective</h2>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">System Roles</span>
+                    <h2 class="display-4 fw-bold mb-4">Three User Roles in ARMS</h2>
+                </div>
             </div>
-
-            <div class="features-grid">
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🔐
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">⚙️</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Administrator</h3>
+                            <p class="text-muted mb-3">Administrators (typically department heads or academic coordinators) have full system control. They can:</p>
+                            <ul class="text-muted small lh-lg">
+                                <li>Review and approve faculty-uploaded content</li>
+                                <li>Create user accounts for faculty and students</li>
+                                <li>Manage system settings and permissions</li>
+                                <li>Monitor resource usage and system analytics</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>Role-Based Access</h3>
-                    <p>
-                        Students, faculty, and administrators have specific roles with appropriate permissions, ensuring
-                        security and proper workflow
-                    </p>
                 </div>
-
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">✅
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">👨‍🏫</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Faculty / Staff</h3>
+                            <p class="text-muted mb-3">Faculty members are content creators and managers. They can:</p>
+                            <ul class="text-muted small lh-lg">
+                                <li>Upload academic resources and study materials</li>
+                                <li>Organize content by subject and semester</li>
+                                <li>Update and maintain their uploaded materials</li>
+                                <li>Track student access to their resources</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>Quality Assurance</h3>
-                    <p>
-                        All uploaded content undergoes verification by the Head of Department before becoming accessible
-                        to students
-                    </p>
                 </div>
-
-                <div class="feature-card scroll-reveal">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">📱
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width: 70px; height: 70px;">
+                                <span class="fs-3">🎓</span>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Student</h3>
+                            <p class="text-muted mb-3">Students are the primary beneficiaries of ARMS. They can:</p>
+                            <ul class="text-muted small lh-lg">
+                                <li>Access verified academic resources for their courses</li>
+                                <li>Browse materials by subject, semester, and topic</li>
+                                <li>Download content for offline study</li>
+                                <li>Utilize resources for exam preparation</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>Easy Accessibility</h3>
-                    <p>
-                        Students can access resources from any device with internet connectivity, enabling flexible
-                        learning
-                    </p>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
-         MISSION & VISION
+         DEVELOPED BY SECTION
          ========================================== -->
-    <section class="section-padding"
-        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
-        <div
-            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);">
-        </div>
-
-        <div class="container" style="position: relative; z-index: 10;">
-            <div style="max-width: 900px; margin: 0 auto; text-align: center; color: white;">
-                <h2 class="scroll-reveal" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Our Mission &
-                    Vision</h2>
-
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
-                    <div class="glass-card scroll-reveal"
-                        style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">Mission</h3>
-                        <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8; margin: 0;">
-                            To provide students with organized, verified academic resources that support their
-                            educational journey and ensure they have access to quality study materials at all times.
-                        </p>
+    <section class="py-5 py-lg-6 bg-gradient-primary text-white position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);"></div>
+        
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Developed By</h2>
+                    <p class="lead mb-0" data-aos="fade-up" data-aos-delay="100">
+                        ARMS was designed and developed by a dedicated team of full-stack developers
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bg-white bg-opacity-10 border-white border-opacity-25 text-white h-100">
+                        <div class="card-body p-4 p-lg-5 text-center">
+                            <div class="rounded-circle bg-white bg-opacity-20 d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
+                                <span class="fs-1">👨‍💻</span>
+                            </div>
+                            <h3 class="h3 fw-bold mb-2">Rajesh Kumar</h3>
+                            <p class="text-white-75 text-uppercase small fw-semibold mb-3 tracking-wider">Full Stack Developer</p>
+                            <p class="mb-0 small lh-lg">
+                                Lead developer responsible for system architecture, backend development, and database design
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="glass-card scroll-reveal"
-                        style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">Vision</h3>
-                        <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8; margin: 0;">
-                            To become a model for digital academic resource management in educational institutions,
-                            fostering efficient learning through technology and faculty collaboration.
-                        </p>
+                </div>
+                
+                <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card bg-white bg-opacity-10 border-white border-opacity-25 text-white h-100">
+                        <div class="card-body p-4 p-lg-5 text-center">
+                            <div class="rounded-circle bg-white bg-opacity-20 d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
+                                <span class="fs-1">👩‍💻</span>
+                            </div>
+                            <h3 class="h3 fw-bold mb-2">Priya Sharma</h3>
+                            <p class="text-white-75 text-uppercase small fw-semibold mb-3 tracking-wider">Full Stack Developer</p>
+                            <p class="mb-0 small lh-lg">
+                                Frontend specialist focusing on user interface design, user experience, and responsive development
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ==========================================
          FOOTER
          ========================================== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">ARMS</div>
-            <p class="footer-text">
-                Academic Resource Management System<br>
-                M.Com in Computer Management (MCM)<br>
-                L.R.T Commerce College, Akola
-            </p>
-
-            <div class="footer-links">
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="faculty.html" class="footer-link">Faculty</a>
-                <a href="syllabus.html" class="footer-link">Syllabus</a>
-                <a href="contact.html" class="footer-link">Contact</a>
-                <a href="login.html" class="footer-link">Login</a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 ARMS. All rights reserved. | Academic Resource Management System</p>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h3 class="h2 fw-bold mb-3 text-gradient">ARMS</h3>
+                    <p class="text-white-50 mb-4">
+                        Academic Resource Management System<br>
+                        Streamlining academic content distribution in educational institutions
+                    </p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                        <a href="index.html" class="text-white-50 text-decoration-none hover-primary">Home</a>
+                        <a href="about.html" class="text-white-50 text-decoration-none hover-primary">About</a>
+                        <a href="pricing.html" class="text-white-50 text-decoration-none hover-primary">Pricing</a>
+                        <a href="pricing.html" class="text-white-50 text-decoration-none hover-primary">Pricing</a>
+                        <a href="demo.html" class="text-white-50 text-decoration-none hover-primary">Demo</a>
+                        <a href="contact.html" class="text-white-50 text-decoration-none hover-primary">Contact</a>
+                        <a href="login.html" class="text-white-50 text-decoration-none hover-primary">Login</a>
+                    </div>
+                    
+                    <hr class="border-secondary my-4">
+                    
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 ARMS. All rights reserved. | Academic Resource Management System
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="main.js"></script>
-
+    
 </body>
 
 </html>
