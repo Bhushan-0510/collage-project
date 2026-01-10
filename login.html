@@ -1,79 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+
 <head>
-<meta charset="utf-8">
-<title>Login</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Login | ARMS - Secure Access</title>
+    <meta name="description" content="Login to ARMS - Academic Resource Management System. Secure access for students, faculty, and administrators.">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html"><img src="assets/logo.png" alt="" srcset=""></a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
-        <li class="nav-item"><a class="nav-link" href="syllabus.html">Syllabus</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item">
-          <a class="btn btn-warning ms-lg-3" href="login.html">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<section class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-5 col-lg-4">
-      <div class="card shadow-sm p-4">
-        <h4 class="text-center mb-3">Login</h4>
-
-        <form id="loginForm" novalidate>
-          <div class="mb-3">
-            <label for="userid" class="form-label visually-hidden">User ID</label>
-            <input id="userid" name="userid" type="text" class="form-control" placeholder="User ID" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="password" class="form-label visually-hidden">Password</label>
-            <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="role" class="form-label visually-hidden">Role</label>
-            <select id="role" name="role" class="form-select" required>
-              <option value="" selected disabled>Select role</option>
-              <option value="student">Student</option>
-              <option value="staff">Staff</option>
-              <option value="admin">Admin</option>
-            </select>
-          </div>
-
-          <div class="d-grid mb-2">
-            <button type="submit" class="btn btn-primary">Login</button>
-          </div>
-
-          <div class="text-center">
-            <a href="#" class="small">Forgot password?</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+<body>
+    
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" aria-label="ARMS Home">ARMS</a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="navbar-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="faculty.html" class="nav-link" role="menuitem">Faculty</a></li>
+                <li role="none"><a href="syllabus.html" class="nav-link" role="menuitem">Syllabus</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="login.html" class="btn-login active" role="menuitem">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- ==========================================
+         LOGIN SECTION
+         ========================================== -->
+    <section class="login-section">
+        <!-- Animated Background Particles -->
+        <div class="hero-particles" aria-hidden="true"></div>
+        
+        <div class="login-container">
+            <div class="login-card">
+                
+                <!-- Login Header -->
+                <div class="login-header">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: white; box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);">
+                        🔐
+                    </div>
+                    <h2>Login to ARMS</h2>
+                    <p>Enter your credentials to access the system</p>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="loginForm" onsubmit="event.preventDefault(); loginRedirect();">
+                    
+                    <div class="form-group">
+                        <label for="userId" class="form-label">User ID</label>
+                        <input 
+                            type="text" 
+                            id="userId" 
+                            class="form-input" 
+                            placeholder="Enter your user ID"
+                            required
+                            autocomplete="username"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="form-input" 
+                            placeholder="Enter your password"
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role" class="form-label">Select Role</label>
+                        <select id="role" class="form-select" required>
+                            <option value="student">Student</option>
+                            <option value="staff">Faculty / Staff</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; color: var(--text-light); font-size: 0.95rem; cursor: pointer;">
+                            <input type="checkbox" style="margin-right: 0.5rem; width: 18px; height: 18px; cursor: pointer;">
+                            Remember me
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        Login to System
+                    </button>
+                    
+                </form>
+                
+                <!-- Additional Links -->
+                <div style="margin-top: 2rem; text-align: center; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Forgot your password?
+                    </p>
+                    <a href="contact.html" style="color: var(--primary-color); font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease;">
+                        Contact Department Office
+                    </a>
+                </div>
+                
+                <!-- Security Notice -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(99, 102, 241, 0.05); border-radius: var(--radius-md); border-left: 4px solid var(--primary-color);">
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <div style="font-size: 1.5rem;">ℹ️</div>
+                        <div>
+                            <h4 style="color: var(--text-dark); font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">Account Information</h4>
+                            <p style="color: var(--text-light); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                                All user accounts are created by the department administrator. If you don't have login credentials, please contact the MCM department office.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Role Information -->
+            <div style="margin-top: 3rem; text-align: center;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 700px; margin: 0 auto;">
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
+                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Students</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.85rem; margin: 0;">
+                            Access study materials and resources
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👨‍🏫</div>
+                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Faculty</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.85rem; margin: 0;">
+                            Upload and manage content
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Admin</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.85rem; margin: 0;">
+                            Verify and approve resources
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         SYSTEM FEATURES (BELOW LOGIN)
+         ========================================== -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Secure Platform</span>
+                <h2 class="section-title">Why ARMS is Trusted</h2>
+            </div>
+            
+            <div class="features-grid">
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Authentication</h3>
+                    <p>
+                        Role-based access control ensures that users only see content appropriate to their role
+                    </p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">✓</div>
+                    <h3>Verified Content</h3>
+                    <p>
+                        All resources are reviewed and approved by the Head of Department before publication
+                    </p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Regular Updates</h3>
+                    <p>
+                        Faculty continuously upload new materials to keep the resource library current
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">ARMS</div>
+            <p class="footer-text">
+                Academic Resource Management System<br>
+                M.Com in Computer Management (MCM)<br>
+                L.R.T Commerce College, Akola
+            </p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="faculty.html" class="footer-link">Faculty</a>
+                <a href="syllabus.html" class="footer-link">Syllabus</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="login.html" class="footer-link">Login</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARMS. All rights reserved. | Academic Resource Management System</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    <script src="main.js"></script>
+    
 </body>
+
 </html>

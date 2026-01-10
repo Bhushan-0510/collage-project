@@ -1,77 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <title>Faculty</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Faculty | ARMS - MCM Department</title>
+    <meta name="description" content="Meet the faculty members of the MCM department who manage academic resources through ARMS at L.R.T Commerce College, Akola.">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"><img src="assets/logo.png" alt="" srcset=""></a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a href="index.html" class="navbar-brand" aria-label="ARMS Home">ARMS</a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
-                    <li class="nav-item"><a class="nav-link" href="syllabus.html">Syllabus</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item">
-                        <a class="btn btn-warning ms-lg-3" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
+            
+            <ul class="navbar-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="faculty.html" class="nav-link active" role="menuitem">Faculty</a></li>
+                <li role="none"><a href="syllabus.html" class="nav-link" role="menuitem">Syllabus</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
+            </ul>
         </div>
     </nav>
-
-
-    <section class="container py-5">
-        <h2 class="fw-bold mb-4">Faculty Members</h2>
-        <div class="row g-4">
-            <div class="col-sm-6 col-md-4">
-                <div class="card p-3 text-center shadow-sm">
-                    <div class="mb-2 fs-4">👩‍🔬</div>
-                    <h6>Prof. Mahesh Baheti</h6>
-                    <small class="muted">Professor</small>
-                </div>
+    
+    <!-- ==========================================
+         PAGE HEADER
+         ========================================== -->
+    <section style="padding: 150px 2rem 80px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <span class="section-label" style="background: rgba(99, 102, 241, 0.2); color: #818cf8;">Our Team</span>
+            <h1 style="color: white; font-size: 3.5rem; margin: 1.5rem 0 1rem; font-weight: 800;">
+                MCM Faculty Members
+            </h1>
+            <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                Dedicated educators contributing to ARMS and shaping the future of commerce education
+            </p>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FACULTY INTRODUCTION
+         ========================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Academic Excellence</span>
+                <h2 class="section-title">ARMS Content Contributors</h2>
+                <p class="section-description">
+                    Our faculty members are the backbone of ARMS, providing verified academic resources and maintaining the highest standards of educational content
+                </p>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="card p-3 text-center shadow-sm">
-                    <div class="mb-2 fs-4">🧑‍🏫</div>
-                    <h6>Prof. Dipika Biyani</h6>
-                    <small class="muted">Associate Professor</small>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FACULTY GRID
+         ========================================== -->
+    <section style="padding: 60px 0 120px;">
+        <div class="container">
+            <div class="faculty-grid">
+                
+                <!-- Faculty Member 1 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar">AK</div>
+                    <h3>Prof. A. Kulkarni</h3>
+                    <p class="faculty-role">Head of Department</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Leading the MCM department and overseeing ARMS operations, ensuring quality academic resources
+                    </p>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="card p-3 text-center shadow-sm">
-                    <div class="mb-2 fs-4">🧑‍🏫</div>
-                    <h6>Prof. Rahul Joshi</h6>
-                    <small class="muted">Associate Professor</small>
+                
+                <!-- Faculty Member 2 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">SD</div>
+                    <h3>Prof. S. Deshmukh</h3>
+                    <p class="faculty-role">Assistant Professor</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Specializing in computer applications and contributing valuable study materials to ARMS
+                    </p>
                 </div>
+                
+                <!-- Faculty Member 3 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">RP</div>
+                    <h3>Prof. R. Patil</h3>
+                    <p class="faculty-role">Assistant Professor</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Expert in database management and web technologies, actively uploading course materials
+                    </p>
+                </div>
+                
+                <!-- Faculty Member 4 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">MS</div>
+                    <h3>Prof. M. Sharma</h3>
+                    <p class="faculty-role">Assistant Professor</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Teaching advanced computing and research methodology, contributing comprehensive notes
+                    </p>
+                </div>
+                
+                <!-- Faculty Member 5 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">NK</div>
+                    <h3>Prof. N. Kadam</h3>
+                    <p class="faculty-role">Assistant Professor</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Specializing in e-commerce and digital marketing, providing industry-relevant resources
+                    </p>
+                </div>
+                
+                <!-- Faculty Member 6 -->
+                <div class="faculty-card">
+                    <div class="faculty-avatar" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">VJ</div>
+                    <h3>Prof. V. Joshi</h3>
+                    <p class="faculty-role">Lecturer</p>
+                    <p style="color: var(--text-light); margin-top: 1rem; line-height: 1.6;">
+                        Teaching programming languages and software development, uploading practical materials
+                    </p>
+                </div>
+                
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="card p-3 text-center shadow-sm">
-                    <div class="mb-2 fs-4">🧑‍🏫</div>
-                    <h6>Prof. Namrata jain</h6>
-                    <small class="muted">Associate Professor</small>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FACULTY ROLES IN ARMS
+         ========================================== -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">System Workflow</span>
+                <h2 class="section-title">Faculty Responsibilities in ARMS</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">📤</div>
+                    <h3>Content Upload</h3>
+                    <p>
+                        Faculty members upload lecture notes, presentations, question banks, and other study materials to ARMS for student access
+                    </p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Regular Updates</h3>
+                    <p>
+                        Continuously update and refresh academic content to align with curriculum changes and current industry trends
+                    </p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">✅</div>
+                    <h3>Quality Maintenance</h3>
+                    <p>
+                        Ensure all uploaded materials meet academic standards and are properly organized by semester and subject
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    
+    <!-- ==========================================
+         CTA SECTION
+         ========================================== -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);"></div>
+        
+        <div class="container" style="position: relative; z-index: 10; text-align: center; color: white;">
+            <h2 class="section-title scroll-reveal" style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">
+                Access Faculty-Curated Resources
+            </h2>
+            <p class="scroll-reveal" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto 2.5rem;">
+                Login to ARMS to access study materials prepared and verified by our experienced faculty members
+            </p>
+            <div class="scroll-reveal">
+                <a href="login.html" class="btn-primary" style="background: white; color: #667eea; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
+                    Student Login
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">ARMS</div>
+            <p class="footer-text">
+                Academic Resource Management System<br>
+                M.Com in Computer Management (MCM)<br>
+                L.R.T Commerce College, Akola
+            </p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="faculty.html" class="footer-link">Faculty</a>
+                <a href="syllabus.html" class="footer-link">Syllabus</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="login.html" class="footer-link">Login</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARMS. All rights reserved. | Academic Resource Management System</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    <script src="main.js"></script>
+    
 </body>
 
 </html>
