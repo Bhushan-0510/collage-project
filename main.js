@@ -125,11 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // ==========================================
-  // LOGIN FORM HANDLING
+  // LOGIN FORM HANDLING - UPDATED FOR LOCALHOST REDIRECT
   // ==========================================
   window.loginRedirect = function() {
-    const userId = document.getElementById('userId').value;
-    const password = document.getElementById('password').value;
+    const userId = document.getElementById('userId').value.trim();
+    const password = document.getElementById('password').value.trim();
     
     // Basic validation
     if (!userId || !password) {
@@ -140,10 +140,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show loading state
     showNotification('Authenticating...', 'info');
     
-    // Simulate authentication delay
+    // ============================================
+    // MOCK AUTHENTICATION (Replace with real API call later)
+    // ============================================
+    
+    // Determine role based on userId pattern
+    let role = "student"; // default
+    let collegeCode = "ABC123";
+
+    if (userId.toLowerCase().startsWith('sa')) {
+      role = "superadmin";
+    } else if (userId.toLowerCase().startsWith('admin')) {
+      role = "admin";
+    } else if (userId.toLowerCase().startsWith('fac')) {
+      role = "faculty";
+    } else {
+      role = "student";
+    }
+
+    // Create token object
+    const token = {
+      role: role,
+      collegeCode: collegeCode,
+      userId: userId,
+      loginTime: new Date().toISOString()
+    };
+
+    // Encode token as URL parameter
+    const encodedToken = encodeURIComponent(JSON.stringify(token));
+
+    // Redirect to localhost with token
     setTimeout(() => {
-      showNotification('Dashboard will open after backend integration.', 'info');
-    }, 1000);
+      window.location.href = `http://localhost:5173/auth/callback?token=${encodedToken}`;
+    }, 500);
   };
   
   // ==========================================
@@ -234,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     card.addEventListener('mouseleave', function() {
       this.style.transform = 'translateY(0) scale(1)';
-    });
+    }); 
   });
   
   // ==========================================
