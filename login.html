@@ -284,19 +284,21 @@
     <!-- Custom JS -->
     <script src="main.js"></script>
     <script>
-  function onLoginSuccess(role = "admin") {
-    // TEMP MOCK TOKEN (frontend testing)
-    const mockToken = JSON.stringify({
-      role: role,
-      collegeCode: "ABC123"
-    });
+   function loginRedirect(event) {
+            event.preventDefault(); // stop page reload
 
-    // Save token
-    localStorage.setItem("arms_token", mockToken);
+            // MOCK LOGIN TOKEN (FOR FRONTEND TESTING)
+            const mockToken = {
+                role: "admin",       // later: faculty / student / superadmin
+                collegeCode: "ABC123"
+            };
 
-    // Redirect to local ARMS frontend
-    window.location.href = "http://localhost:5173";
-  }
+            // SAVE TOKEN
+            localStorage.setItem("arms_token", JSON.stringify(mockToken));
+
+            // REDIRECT TO LOCAL ARMS FRONTEND
+            window.location.href = "http://localhost:5173";
+        }
 </script>
 
 
