@@ -189,6 +189,57 @@
 
     <!-- Common JS -->
     <script src="main.js"></script>
+   <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+    <script>
+        function loginRedirect() {
+            // Get user input
+            const userId = document.getElementById('userId').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Basic validation
+            if (!userId || !password) {
+                alert('Please enter both User ID and Password');
+                return;
+            }
+
+            // ============================================
+            // MOCK AUTHENTICATION (Replace with real API call later)
+            // ============================================
+            
+            // Example: Determine role based on userId pattern
+            let role = "student"; // default
+            let collegeCode = "ABC123";
+
+            if (userId.toLowerCase().startsWith('sa')) {
+                role = "superadmin";
+            } else if (userId.toLowerCase().startsWith('admin')) {
+                role = "admin";
+            } else if (userId.toLowerCase().startsWith('fac')) {
+                role = "faculty";
+            } else {
+                role = "student";
+            }
+
+            // Create token object
+            const token = {
+                role: role,
+                collegeCode: collegeCode,
+                userId: userId,
+                loginTime: new Date().toISOString()
+            };
+
+            // Encode token as URL parameter
+            const encodedToken = encodeURIComponent(JSON.stringify(token));
+
+            // Redirect to localhost with token
+            window.location.href = `http://localhost:5173/auth/callback?token=${encodedToken}`;
+        }
+    </script>
 
 </body>
+
 </html>
