@@ -535,3 +535,23 @@ textarea:focus-visible {
     height:55px;
   }
 }
+
+/* ==========================================
+   SCREENSHOT / PLACEHOLDER IMAGE STYLING
+   Ensures screenshots are centered and scale nicely
+   ========================================== */
+.placeholder-screenshot {
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-screenshot img,
+.screenshot-img {
+  max-width: 100%;
+  max-height: 150%;
+  /* width: auto;
+  height: auto; */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
