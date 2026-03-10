@@ -373,3 +373,68 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('%c✨ Modern Education Software Platform', 'color: #764ba2; font-size: 14px;');
   
 });
+
+//contact form submission
+document.addEventListener('DOMContentLoaded', () => {
+  const inquiryForm = document.getElementById('inquiryForm');
+  const formResponse = document.getElementById('formResponse');
+  const submitBtn = document.getElementById('submitBtn');
+
+  if (inquiryForm) {
+      inquiryForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          // Disable button and show loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+          formResponse.innerHTML = '';
+
+          const formData = {
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              phone: document.getElementById('phone').value,
+              collegeName: document.getElementById('collegeName').value,
+              message: document.getElementById('message').value
+          };
+
+          try {
+              // Adjust base URL based on environment
+              // Assuming backend runs on port 5000 as per previous context
+              const response = await fetch('http://localhost:5000/api/inquiries', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(formData)
+              });
+
+              const result = await response.json();
+
+              if (response.ok) {
+                  formResponse.innerHTML = `
+                      <div class="alert alert-success border-0 shadow-sm">
+                          <strong>Success!</strong> Your inquiry has been submitted. Our team will contact you soon.
+                      </div>
+                  `;
+                  inquiryForm.reset();
+              } else {
+                  formResponse.innerHTML = `
+                      <div class="alert alert-danger border-0 shadow-sm">
+                          <strong>Error:</strong> ${result.message || 'Something went wrong. Please try again later.'}
+                      </div>
+                  `;
+              }
+          } catch (error) {
+              console.error('Submission error:', error);
+              formResponse.innerHTML = `
+                  <div class="alert alert-danger border-0 shadow-sm">
+                      <strong>Network Error:</strong> Cannot reach the server. Please check your connection.
+                  </div>
+              `;
+          } finally {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = 'Submit Inquiry';
+          }
+      });
+  }
+});
