@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Download ARMS App | Academic Resource Management System</title>
+    <meta name="description" content="Download the ARMS mobile app for Android. Access academic resources, notes, and study materials anytime, anywhere on your smartphone.">
+    <meta name="keywords" content="ARMS App, Download, Android APK, Academic Resources, Mobile App">
+    <meta name="author" content="ARMS Development Team">
+
+    <link rel="icon" type="image/svg+xml" href="logof.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Phone mockup ── */
+        .phone-mockup-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-glow {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99,102,241,0.35) 0%, transparent 70%);
+            filter: blur(30px);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50%       { transform: scale(1.15); opacity: 1; }
+        }
+
+        .phone-svg {
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+            animation: float-phone 4s ease-in-out infinite;
+        }
+
+        @keyframes float-phone {
+            0%, 100% { transform: translateY(0px);  }
+            50%       { transform: translateY(-14px); }
+        }
+
+        /* ── Download button ── */
+        .btn-download {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            border: none;
+            color: white;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(34,197,94,0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(34,197,94,0.5);
+            color: white;
+        }
+
+        .btn-download:active {
+            transform: translateY(-1px);
+        }
+
+        /* ── Version badge ── */
+        .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            padding: 0.4rem 1.1rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            backdrop-filter: blur(8px);
+        }
+
+        .version-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.3; }
+        }
+
+        /* ── Stat cards ── */
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.09);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Feature list ── */
+        .feature-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .feature-list-item:last-child { border-bottom: none; }
+
+        .feature-check {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #818cf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+        }
+
+        /* ── Steps ── */
+        .step-number {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: white;
+            flex-shrink: 0;
+            margin: 0 auto 1.25rem;
+        }
+
+        .step-connector {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .step-connector {
+                display: block;
+                position: absolute;
+                top: 28px;
+                left: calc(50% + 28px);
+                width: calc(100% - 56px);
+                height: 2px;
+                background: linear-gradient(90deg, #6366f1, #818cf8);
+                opacity: 0.3;
+            }
+        }
+
+        /* ── Requirement pill ── */
+        .req-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 50px;
+            padding: 0.45rem 1rem;
+            font-size: 0.85rem;
+            color: #6366f1;
+            font-weight: 500;
+        }
+
+        /* ── Hero download section ── */
+        .download-hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .download-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 15% 40%, rgba(99,102,241,0.18) 0%, transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(236,72,153,0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* animated background grid */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* ── QR placeholder box ── */
+        .qr-box {
+            width: 140px; height: 140px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            margin: 0 auto;
+            padding: 12px;
+        }
+
+        .qr-inner {
+            width: 100%; height: 100%;
+            background: repeating-conic-gradient(#6366f1 0% 25%, transparent 0% 50%) 0 0 / 12px 12px;
+            border-radius: 8px;
+            opacity: 0.15;
+        }
+
+        /* ── Warning note ── */
+        .install-note {
+            background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(245,158,11,0.05));
+            border: 1px solid rgba(245,158,11,0.25);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+        }
+
+        /* ── CTA bottom ── */
+        .cta-bottom {
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bottom::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="ARMS logo" class="img-fluid" style="max-height: 40px;">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="demo.html">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-2">
+                        <a class="nav-link active px-3 fw-semibold" href="download.html" style="color: #22c55e !important;">📱 Download App</a>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-2">
+                        <a class="btn btn-gradient px-4 py-2" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO — DOWNLOAD SECTION
+         ========================================== -->
+    <section class="download-hero d-flex align-items-center">
+        <div class="hero-grid"></div>
+        <div class="hero-particles position-absolute w-100 h-100" aria-hidden="true"></div>
+
+        <div class="container position-relative py-5" style="z-index: 10;">
+            <div class="row align-items-center g-5 d-flex flex-column-reverse flex-lg-row">
+
+                <!-- Left: Text & CTA -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="mb-4">
+                        <span class="version-badge">
+                            <span class="version-dot"></span>
+                            Latest Version Available
+                        </span>
+                    </div>
+
+                    <p class="hero-subtitle text-uppercase mb-3 fw-semibold" style="letter-spacing: 2px;">ARMS Mobile App</p>
+
+                    <h1 class="display-2 fw-bold text-white mb-4" style="line-height: 1.1;">
+                        Access ARMS<br>
+                        <span class="text-gradient">Anywhere, Anytime</span>
+                    </h1>
+
+                    <p class="lead text-white-75 mb-5" style="max-width: 480px;">
+                        The official ARMS Android app lets students and faculty access verified academic resources, download study materials, and stay connected — right from their smartphone.
+                    </p>
+
+                    <!-- Download Button -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-sm-center mb-5">
+                        <a href="ARMS.apk" class="btn-download" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.341A7 7 0 1 0 7.2 5.48L5.78 4.06A8.977 8.977 0 0 1 12 2a9 9 0 1 1-9 9c0-1.49.363-2.894 1.004-4.127L2.586 5.464 7 5.5l-.036 4.414-1.44-1.44A7 7 0 0 0 17.523 15.341zM13 12V8h-2v4H8l4 4 4-4h-3z"/>
+                            </svg>
+                            Download APK
+                            <span style="font-size: 0.75rem; opacity: 0.8; font-weight: 500;">Free · Android</span>
+                        </a>
+                        <a href="#how-to-install" class="btn btn-outline-light px-4 py-3" style="border-radius: 50px;">
+                            How to Install
+                        </a>
+                    </div>
+
+                    <!-- Requirement pills -->
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="req-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.463 11.463 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            Android 8.0+
+                        </span>
+                        <span class="req-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-2V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H5c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 9V7c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg>
+                            Institutional Login Required
+                        </span>
+                        <span class="req-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 0 0-6 0zm-4-4 2 2a7.074 7.074 0 0 1 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                            Internet Required
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right: Phone Mockup -->
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="phone-mockup-wrap" style="height: 480px;">
+                        <div class="phone-glow"></div>
+                        <!-- SVG Phone Mockup -->
+                        <svg class="phone-svg" width="240" height="460" viewBox="0 0 240 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Phone body -->
+                            <rect x="4" y="4" width="232" height="452" rx="36" fill="#1e293b" stroke="url(#phoneGrad)" stroke-width="2"/>
+                            <!-- Screen area -->
+                            <rect x="14" y="14" width="212" height="432" rx="28" fill="#0f172a"/>
+                            <image href="phone.jpg" x="14" y="14" width="212" height="432" preserveAspectRatio="none" clip-path="url(#screenClip)"/>
+                            <!-- Notch -->
+                            <rect x="85" y="14" width="70" height="22" rx="11" fill="#1e293b"/>
+                            <!-- Status bar dots -->
+                            <circle cx="110" cy="25" r="3" fill="#6366f1" opacity="0.6"/>
+                            <circle cx="120" cy="25" r="5" fill="#374151"/>
+
+                            <!-- Home indicator bar -->
+                            <rect x="95" y="444" width="50" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+
+                            <!-- Defs -->
+                            <defs>
+                                <clipPath id="screenClip">
+                                    <rect x="14" y="14" width="212" height="432" rx="28" />
+                                </clipPath>
+                                <linearGradient id="phoneGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#818cf8"/>
+                                </linearGradient>
+                                <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#4f46e5"/>
+                                    <stop offset="100%" stop-color="#6366f1"/>
+                                </linearGradient>
+                                <linearGradient id="cardGrad1" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                                <linearGradient id="iconGrad1" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#4facfe"/>
+                                    <stop offset="100%" stop-color="#00f2fe"/>
+                                </linearGradient>
+                                <linearGradient id="iconGrad2" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#f093fb"/>
+                                    <stop offset="100%" stop-color="#f5576c"/>
+                                </linearGradient>
+                                <linearGradient id="iconGrad3" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#fa709a"/>
+                                    <stop offset="100%" stop-color="#fee140"/>
+                                </linearGradient>
+                                <linearGradient id="navGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#1e293b"/>
+                                    <stop offset="100%" stop-color="#0f172a"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats row -->
+            <div class="row g-3 mt-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="text-white-50 small mt-1">User Roles</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="text-white-50 small mt-1">Free to Use</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">v1.0</div>
+                        <div class="text-white-50 small mt-1">Current Version</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">APK</div>
+                        <div class="text-white-50 small mt-1">Direct Install</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         APP FEATURES SECTION
+         ========================================== -->
+    <section class="py-5 py-lg-6 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">What's Inside</span>
+                    <h2 class="display-4 fw-bold mb-4">Everything You Need, On Mobile</h2>
+                    <p class="lead text-muted">
+                        The ARMS mobile app brings the full power of the platform to your fingertips — optimized for on-the-go access.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="h4 fw-bold mb-4">App Features</h3>
+
+                            <div class="feature-list-item">
+                                <div class="feature-check">📥</div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Download Resources Offline</h6>
+                                    <p class="text-muted small mb-0">Save notes, PDFs, and presentations for offline access — study anywhere without internet.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-list-item">
+                                <div class="feature-check">🔐</div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Secure Role-Based Login</h6>
+                                    <p class="text-muted small mb-0">Students, faculty, and admins each get their own tailored dashboard and access level.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-list-item">
+                                <div class="feature-check">📂</div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Browse by Subject & Semester</h6>
+                                    <p class="text-muted small mb-0">Organised resource library — find exactly what you need by department, course, or topic.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-list-item">
+                                <div class="feature-check">🔔</div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">New Resource Notifications</h6>
+                                    <p class="text-muted small mb-0">Get notified the moment faculty upload new study materials for your subjects.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-list-item">
+                                <div class="feature-check">⚡</div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Fast & Lightweight</h6>
+                                    <p class="text-muted small mb-0">Optimized for performance — works smoothly even on entry-level Android devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="card feature-card border-0 shadow-sm h-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-3" style="width:60px;height:60px;">
+                                        <span class="fs-4">🎓</span>
+                                    </div>
+                                    <h6 class="fw-bold mb-2">Student View</h6>
+                                    <p class="text-muted small mb-0">Browse &amp; download all approved study materials.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card feature-card border-0 shadow-sm h-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="feature-icon bg-gradient-secondary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-3" style="width:60px;height:60px;">
+                                        <span class="fs-4">👨‍🏫</span>
+                                    </div>
+                                    <h6 class="fw-bold mb-2">Faculty View</h6>
+                                    <p class="text-muted small mb-0">Upload and manage your course resources on the go.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card feature-card border-0 shadow-sm h-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="feature-icon bg-gradient-info text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-3" style="width:60px;height:60px;">
+                                        <span class="fs-4">🛡️</span>
+                                    </div>
+                                    <h6 class="fw-bold mb-2">Admin View</h6>
+                                    <p class="text-muted small mb-0">Review &amp; approve submitted resources with ease.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card feature-card border-0 shadow-sm h-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="feature-icon bg-gradient-warning text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-3" style="width:60px;height:60px;">
+                                        <span class="fs-4">📶</span>
+                                    </div>
+                                    <h6 class="fw-bold mb-2">Offline Mode</h6>
+                                    <p class="text-muted small mb-0">View downloaded files without any internet connection.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HOW TO INSTALL SECTION
+         ========================================== -->
+    <section class="py-5 py-lg-6 bg-white" id="how-to-install">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">Installation Guide</span>
+                    <h2 class="display-4 fw-bold mb-4">Install in 3 Simple Steps</h2>
+                    <p class="lead text-muted">
+                        Since ARMS is distributed directly (not via Play Store), you'll need to allow installation from unknown sources. It's quick and safe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5 position-relative">
+                <!-- Step 1 -->
+                <div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card feature-card border-0 shadow-sm h-100 text-center p-2">
+                        <div class="card-body p-4">
+                            <div class="step-number bg-gradient-primary mx-auto mb-4" style="width:64px;height:64px;font-size:1.5rem;">1</div>
+                            <h5 class="fw-bold mb-3">Download the APK</h5>
+                            <p class="text-muted small mb-0">Tap the <strong>"Download APK"</strong> button on this page. The file will download directly to your Android phone's storage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card border-0 shadow-sm h-100 text-center p-2">
+                        <div class="card-body p-4">
+                            <div class="step-number bg-gradient-secondary mx-auto mb-4" style="width:64px;height:64px;font-size:1.5rem;">2</div>
+                            <h5 class="fw-bold mb-3">Allow Unknown Sources</h5>
+                            <p class="text-muted small mb-0">When prompted, go to <strong>Settings → Security → Install Unknown Apps</strong> and allow your browser to install APKs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card border-0 shadow-sm h-100 text-center p-2">
+                        <div class="card-body p-4">
+                            <div class="step-number bg-gradient-warning mx-auto mb-4" style="width:64px;height:64px;font-size:1.5rem;">3</div>
+                            <h5 class="fw-bold mb-3">Login &amp; Access ARMS</h5>
+                            <p class="text-muted small mb-0">Open the app, log in with your institutional credentials, and start accessing your academic resources instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning note -->
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <div class="install-note d-flex gap-3 align-items-start">
+                        <span style="font-size: 1.5rem; flex-shrink: 0;">⚠️</span>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: #92400e;">Important Security Note</h6>
+                            <p class="small mb-0" style="color: #78350f;">
+                                You may see a warning from Android when installing from outside the Play Store — this is normal for direct APK installs. The ARMS APK is safe and officially distributed by your institution. After installation, you can re-disable "Unknown Sources" in your settings for added security.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         REQUIREMENTS SECTION
+         ========================================== -->
+    <section class="py-5 py-lg-6 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-soft text-primary px-3 py-2 mb-3 rounded-pill">System Requirements</span>
+                    <h2 class="display-4 fw-bold mb-4">Compatible With Your Device?</h2>
+                    <p class="lead text-muted">ARMS is designed to run on the vast majority of Android smartphones used in educational institutions.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-primary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width:60px;height:60px;">
+                                <span class="fs-4">📱</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Android Version</h5>
+                            <p class="text-muted mb-2">Minimum: <strong>Android 8.0 (Oreo)</strong></p>
+                            <p class="text-muted mb-0">Recommended: <strong>Android 10 or higher</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-info text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width:60px;height:60px;">
+                                <span class="fs-4">💾</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Storage &amp; RAM</h5>
+                            <p class="text-muted mb-2">Free Space: <strong>50 MB minimum</strong></p>
+                            <p class="text-muted mb-0">RAM: <strong>2 GB or more</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-gradient-secondary text-white rounded-3 d-inline-flex align-items-center justify-content-center mb-4" style="width:60px;height:60px;">
+                                <span class="fs-4">🌐</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Connectivity</h5>
+                            <p class="text-muted mb-2">Login &amp; sync: <strong>Internet required</strong></p>
+                            <p class="text-muted mb-0">Downloaded files: <strong>Works offline</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FINAL CTA
+         ========================================== -->
+    <section class="py-5 py-lg-6 cta-bottom">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7" data-aos="fade-up">
+                    <span class="version-badge mb-4 d-inline-flex">
+                        <span class="version-dot"></span>
+                        Ready to Download
+                    </span>
+                    <h2 class="display-4 fw-bold text-white mt-3 mb-4">
+                        Take ARMS With You
+                    </h2>
+                    <p class="lead text-white mb-5" style="opacity: 0.85;">
+                        Join your institution on ARMS — study smarter, access faster, and never miss a resource update.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="ARMS.apk" class="btn-download" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+  <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708"/>
+</svg>
+                            </svg>
+                            Download APK — Free
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg px-5 py-3" style="border-radius: 50px;">
+                            Need Help?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h3 class="h2 fw-bold mb-3 text-gradient">ARMS</h3>
+                    <p class="text-white-50 mb-4">
+                        Academic Resource Management System<br>
+                        Streamlining academic content distribution in educational institutions
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                        <a href="index.html" class="text-white-50 text-decoration-none hover-primary">Home</a>
+                        <a href="about.html" class="text-white-50 text-decoration-none hover-primary">About</a>
+                        <a href="pricing.html" class="text-white-50 text-decoration-none hover-primary">Pricing</a>
+                        <a href="demo.html" class="text-white-50 text-decoration-none hover-primary">Demo</a>
+                        <a href="contact.html" class="text-white-50 text-decoration-none hover-primary">Contact</a>
+                        <a href="download.html" class="text-white-50 text-decoration-none hover-primary" style="color: #22c55e !important;">📱 Download App</a>
+                        <a href="login.html" class="text-white-50 text-decoration-none hover-primary">Login</a>
+                    </div>
+
+                    <hr class="border-secondary my-4">
+
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 ARMS. All rights reserved. | Academic Resource Management System
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="whatsapp-float"
+       href="https://wa.me/918956422281?text=Hello%2C%20we%20would%20like%20to%20implement%20ARMS%20for%20our%20college.%0A%0APlease%20guide%20us%20on%20the%20next%20steps."
+       target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path>
+            <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path>
+            <path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path>
+            <path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path>
+            <path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+        </svg>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+
+</body>
+</html>
